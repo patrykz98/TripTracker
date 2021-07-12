@@ -13,27 +13,37 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp">
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_label"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@id/tv_description_add_new"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/russo_one"
+            android:fontFamily="@font/comfortaa_bold"
             android:text="Add your new trip"
             android:textColor="@color/white"
-            android:layout_above="@id/tv_description_add_new"
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_description_add_new"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/russo_one"
-            android:text="abc"
+            android:fontFamily="@font/comfortaa_light"
+            android:text="Enter data in the\nappropriate fields\nprovided below"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
+    </LinearLayout>
     </RelativeLayout>
 
     <RelativeLayout
@@ -43,6 +53,103 @@
         android:background="@drawable/rounded_bg"
         android:elevation="36dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/comfortaa"
+            android:paddingBottom="10dp"
+            android:text="Amount of kilometers"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="14sp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa_light"
+            android:textColorHint="@color/cardview_dark_background"
+            android:hint="Kilometers"
+            android:background="@drawable/edittext_bg"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/comfortaa"
+            android:paddingBottom="10dp"
+            android:text="Destination"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="14sp"
+            android:inputType="textAutoCorrect"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa_light"
+            android:textColorHint="@color/cardview_dark_background"
+            android:hint="Town or interesting place"
+            android:background="@drawable/edittext_bg"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/comfortaa"
+            android:paddingBottom="10dp"
+            android:text="Team members"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa_light"
+            android:hint="Your friends"
+            android:textColorHint="@color/cardview_dark_background"
+            android:background="@drawable/edittext_bg"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/comfortaa"
+            android:paddingBottom="10dp"
+            android:text="Additional description"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="14sp"
+            android:inputType="textAutoCorrect"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa_light"
+            android:hint="Things worth to remebember"
+            android:textColorHint="@color/cardview_dark_background"
+            android:background="@drawable/edittext_bg"/>
+
+    </LinearLayout>
 
     </RelativeLayout>
 
