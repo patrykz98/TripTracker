@@ -3,11 +3,15 @@ package com.example.fragmentdemo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.example.fragmentdemo.databinding.ActivityMainBinding
 import com.example.fragmentdemo.fragments.AddNewFragment
 import com.example.fragmentdemo.fragments.HomeFragment
 import com.example.fragmentdemo.fragments.PlansFragment
 import com.example.fragmentdemo.fragments.SuggestionFragment
+import com.google.android.material.bottomnavigation.BottomNavigationMenu
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +26,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(homeFragment)
+
+        val viewPagerFragment = findViewById<ViewPager2>(R.id.viewPagerFragment)
+
+//       val fragments: ArrayList<Fragment> = arrayListOf(
+//           HomeFragment(),
+//           AddNewFragment(),
+//           SuggestionFragment(),
+//           PlansFragment()
+//        )
+//
+//        val adapter = ViewPagerFragmentAdapter(fragments, this)
+//        viewPagerFragment.adapter = adapter
 
 
         binding.bottomMenu.setOnNavigationItemSelectedListener {
@@ -41,8 +57,6 @@ class MainActivity : AppCompatActivity() {
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.fragmentContainer, fragment)
             transaction.commit()
-
-            binding.bottomMenu.setBackgroundColor(resources.getColor(R.color.purple_200))
         }
     }
 
