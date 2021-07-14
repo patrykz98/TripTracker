@@ -44,6 +44,16 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/roadtripimageview"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="30dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"/>
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -148,6 +158,33 @@
             android:hint="Things worth \nto remebember"
             android:textColorHint="@color/color_hintext"
             android:background="@drawable/edittext_bg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="60dp">
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/comfortaa"
+                android:background="@drawable/bg_button"/>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/comfortaa"
+                android:background="@drawable/bg_button"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
