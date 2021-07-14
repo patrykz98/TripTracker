@@ -79,7 +79,7 @@
             android:inputType="numberDecimal"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
-            android:textColorHint="@color/cardview_dark_background"
+            android:textColorHint="@color/color_hintext"
             android:hint="Kilometers"
             android:background="@drawable/edittext_bg"/>
 
@@ -101,7 +101,7 @@
             android:inputType="textAutoCorrect"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
-            android:textColorHint="@color/cardview_dark_background"
+            android:textColorHint="@color/color_hintext"
             android:hint="Town or interesting place"
             android:background="@drawable/edittext_bg"/>
 
@@ -124,7 +124,7 @@
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
             android:hint="Your friends"
-            android:textColorHint="@color/cardview_dark_background"
+            android:textColorHint="@color/color_hintext"
             android:background="@drawable/edittext_bg"/>
 
         <com.google.android.material.textview.MaterialTextView
@@ -140,13 +140,13 @@
 
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:textSize="14sp"
             android:inputType="textAutoCorrect"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
-            android:hint="Things worth to remebember"
-            android:textColorHint="@color/cardview_dark_background"
+            android:hint="Things worth \nto remebember"
+            android:textColorHint="@color/color_hintext"
             android:background="@drawable/edittext_bg"/>
 
     </LinearLayout>
