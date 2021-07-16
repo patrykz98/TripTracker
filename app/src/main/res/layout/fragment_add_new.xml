@@ -22,7 +22,6 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_label"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/tv_description_add_new"
@@ -51,8 +50,7 @@
             android:src="@drawable/roadtripimageview"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="30dp"
-            android:outlineAmbientShadowColor="@color/black"
-            android:outlineSpotShadowColor="@color/black"/>
+            android:adjustViewBounds="true"/>
 
     </RelativeLayout>
 
@@ -89,7 +87,7 @@
             android:inputType="numberDecimal"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
-            android:textColorHint="@color/color_hintext"
+            android:textColorHint="@color/color_orange"
             android:hint="Kilometers"
             android:background="@drawable/edittext_bg"/>
 
@@ -111,7 +109,7 @@
             android:inputType="textAutoCorrect"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
-            android:textColorHint="@color/color_hintext"
+            android:textColorHint="@color/color_orange"
             android:hint="Town or interesting place"
             android:background="@drawable/edittext_bg"/>
 
@@ -134,7 +132,7 @@
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
             android:hint="Your friends"
-            android:textColorHint="@color/color_hintext"
+            android:textColorHint="@color/color_orange"
             android:background="@drawable/edittext_bg"/>
 
         <com.google.android.material.textview.MaterialTextView
@@ -156,7 +154,7 @@
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_light"
             android:hint="Things worth \nto remebember"
-            android:textColorHint="@color/color_hintext"
+            android:textColorHint="@color/color_orange"
             android:background="@drawable/edittext_bg"/>
 
         <RelativeLayout
@@ -172,7 +170,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_alignParentLeft="true"
                 android:fontFamily="@font/comfortaa"
-                android:background="@drawable/bg_button"/>
+                android:background="@drawable/bg_button"
+                android:adjustViewBounds="true"/>
 
             <Button
                 android:id="@+id/btn_cancel"
@@ -182,7 +181,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/comfortaa"
-                android:background="@drawable/bg_button"/>
+                android:background="@drawable/bg_button_cancel"
+                android:adjustViewBounds="true"/>
 
         </RelativeLayout>
 
