@@ -162,27 +162,43 @@
             android:layout_height="wrap_content"
             android:paddingTop="60dp">
 
-            <Button
-                android:id="@+id/btn_add"
+            <FrameLayout
                 android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:text="Add"
+                android:layout_height="60dp"
                 android:layout_marginLeft="30dp"
                 android:layout_alignParentLeft="true"
-                android:fontFamily="@font/comfortaa"
-                android:background="@drawable/bg_button"
-                android:adjustViewBounds="true"/>
+                android:background="@drawable/bg_button">
 
-            <Button
-                android:id="@+id/btn_cancel"
-                android:layout_width="130dp"
+            <TextView
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cancel"
+                android:text="Add"
+                android:fontFamily="@font/comfortaa"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="130dp"
+                android:layout_height="60dp"
                 android:layout_marginRight="30dp"
                 android:layout_alignParentRight="true"
-                android:fontFamily="@font/comfortaa"
-                android:background="@drawable/bg_button_cancel"
-                android:adjustViewBounds="true"/>
+                android:background="@drawable/bg_button_cancel">
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="Cancel"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+            </FrameLayout>
 
         </RelativeLayout>
 

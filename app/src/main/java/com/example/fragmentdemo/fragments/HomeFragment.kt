@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fragmentdemo.DataObject
 import com.example.fragmentdemo.R
 import com.example.fragmentdemo.databinding.ActivityMainBinding
 import com.example.fragmentdemo.databinding.FragmentHomeBinding
@@ -19,7 +20,13 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        val data: MutableList<DataObject> = ArrayList()
+        for (i in 1..10)
+            data.add(DataObject("Test $i"))
+
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        //binding = FragmentHomeBinding.inflate(layoutInflater)
 
         binding.horizontalRvHome.layoutManager = LinearLayoutManager(context)
         binding.horizontalRvHome.adapter
