@@ -20,6 +20,4 @@ interface TripDao {
 
     @Query("DELETE FROM trip_table")
     fun delteAllRows()
-
-
 }
