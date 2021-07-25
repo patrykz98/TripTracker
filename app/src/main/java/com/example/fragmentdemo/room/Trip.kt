@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "trip_table")
-data class Trip(var kilometers: Int,
+data class Trip(var kilometers: String,
                 var destination: String,
                 var members: String,
                 var description: String){
