@@ -1,17 +1,18 @@
 package com.example.fragmentdemo.fragments
 
+import com.example.fragmentdemo.R
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.FrameLayout
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.fragmentdemo.R
-import com.example.fragmentdemo.databinding.FragmentAddNewBinding
 import com.example.fragmentdemo.room.Trip
 import com.example.fragmentdemo.viewmodel.TripViewModel
+
 
 class AddNewFragment : Fragment() {
 
@@ -23,10 +24,9 @@ class AddNewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-//        viewModel = ViewModelProvider(this).get(TripViewModel::class.java)
-
         val view = inflater.inflate(R.layout.fragment_add_new, container, false)
         val addButton = view.findViewById<FrameLayout>(R.id.add_Button)
+        val cancelButton = view.findViewById<FrameLayout>(R.id.cancel_Button)
         val destination = view.findViewById<EditText>(R.id.destinationET)
         val kilometers = view.findViewById<EditText>(R.id.kilometersET)
 
@@ -36,9 +36,10 @@ class AddNewFragment : Fragment() {
 
             val trip = Trip(kilometers, destination, members = "Kawasaki", description = "Nic takiego")
             viewModel.insertTrip(trip)
+
+            Toast.makeText(context, "New trip note added!", Toast.LENGTH_SHORT).show()
         }
 
-        // Inflate the layout for this fragment
         return view
     }
 
