@@ -27,6 +27,7 @@ class AddNewFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_add_new, container, false)
         val addButton = view.findViewById<FrameLayout>(R.id.add_Button)
         val cancelButton = view.findViewById<FrameLayout>(R.id.cancel_Button)
+        val clearButton = view.findViewById<FrameLayout>(R.id.clearButton)
         val destination = view.findViewById<EditText>(R.id.destinationET)
         val kilometers = view.findViewById<EditText>(R.id.kilometersET)
 
@@ -38,6 +39,15 @@ class AddNewFragment : Fragment() {
             viewModel.insertTrip(trip)
 
             Toast.makeText(context, "New trip note added!", Toast.LENGTH_SHORT).show()
+        }
+
+        cancelButton.setOnClickListener {
+            destination.setText("Town or interesting place")
+            kilometers.setText("Kilometers")
+        }
+
+        clearButton.setOnClickListener {
+            viewModel.deleteAllRows()
         }
 
         return view
