@@ -48,6 +48,7 @@ class AddNewFragment : Fragment() {
 
         clearButton.setOnClickListener {
             viewModel.deleteAllRows()
+            Toast.makeText(context, "You clear all saved trips!", Toast.LENGTH_SHORT).show()
         }
 
         return view

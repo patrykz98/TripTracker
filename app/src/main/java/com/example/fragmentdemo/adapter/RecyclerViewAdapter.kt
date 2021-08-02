@@ -12,7 +12,8 @@ import com.example.fragmentdemo.databinding.CardViewBinding
 import com.example.fragmentdemo.room.Trip
 
 class RecyclerViewAdapter(
-    private val listOfTrip: List<Trip>
+    private val listOfTrip: List<Trip>,
+    private val listener: OnItemClickListener
     ): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     private lateinit var binding: CardViewBinding
@@ -43,10 +44,23 @@ class RecyclerViewAdapter(
     inner class MyViewHolder
     internal constructor(
         itemView: View
-    ): RecyclerView.ViewHolder(itemView){
+    ): RecyclerView.ViewHolder(itemView), View.OnClickListener{
         val tvTitle: TextView = itemView.findViewById(R.id.tvCard)
         val tvTitleTop: TextView = itemView.findViewById(R.id.tvCardTop)
         val cardItem: CardView = itemView.findViewById(R.id.card_item)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?){
+            listener.onItemClick()
+        }
+
+    }
+
+    interface OnItemClickListener{
+        fun onItemClick()
     }
 
 }
